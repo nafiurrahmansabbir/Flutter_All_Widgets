@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_all_widgets/Button_All.dart';
+import 'package:flutter_all_widgets/Navigator_and_Theme.dart';
 import 'package:flutter_all_widgets/Scaffold_Column_Row_Dialog_bottom_sheet_Snackbar.dart';
 import 'package:flutter_all_widgets/TextField_Container_Padding.dart';
 import 'package:flutter_all_widgets/Text_Center_Image_Icon.dart';
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
         "Colum_Row":(context)=>Col_Row(),
         "TextField_Container_Padding" : (context)=> TextField_Container_Padding(),
         "Button" : (context)=> Button_all(),
+        "NT": (context)=>Nav_them(),
+
 
       },
       home: HomePage(),
@@ -36,6 +39,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // custom Colour : 0xFF trpor color code 6 dgit er hexa code
+        // backgroundColor: Color(0xFF3F91D0FF),
         backgroundColor: Colors.pink,
         title: Text("All Widgets Button"),
         centerTitle: true,
@@ -82,6 +87,19 @@ class HomePage extends StatelessWidget {
             },
                 child: Text("All_Button")),
           ),
+          Container(
+              height: 40,
+              color: Colors.orange,
+              child: Center(child: Text("Module 8"))
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, "NT");
+            },
+                child: Text("Navigator || Theme")),
+          ),
+
 
         ],
       ),
