@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_all_widgets/Button_All.dart';
 import 'package:flutter_all_widgets/Navigator_and_Theme.dart';
 import 'package:flutter_all_widgets/Scaffold_Column_Row_Dialog_bottom_sheet_Snackbar.dart';
 import 'package:flutter_all_widgets/TextField_Container_Padding.dart';
 import 'package:flutter_all_widgets/Text_Center_Image_Icon.dart';
+import 'package:flutter_all_widgets/Cupertino_widget.dart';
 
 void main(){
   runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         "TextField_Container_Padding" : (context)=> TextField_Container_Padding(),
         "Button" : (context)=> Button_all(),
         "NT": (context)=>Nav_them(),
+        "cupertino": (context)=>Cupertino(),
 
 
       },
@@ -98,6 +100,13 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, "NT");
             },
                 child: Text("Navigator || Theme")),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, "cupertino");
+            },
+                child: Text("Cupertino")),
           ),
 
 
