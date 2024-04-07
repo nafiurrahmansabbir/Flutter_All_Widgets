@@ -16,6 +16,7 @@ class Cupertino extends StatelessWidget {
 class CP extends StatelessWidget {
   const CP({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
