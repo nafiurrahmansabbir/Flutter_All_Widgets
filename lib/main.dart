@@ -40,21 +40,43 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Container(
+          child: UserAccountsDrawerHeader(
+            accountName: Text("Nafiur Rahman Sabbir"),
+            accountEmail: Text("nafiurrahmansabbir@gmail.com"),
+
+          ),
+        ),
+      ),
       appBar: AppBar(
         // custom Colour : 0xFF trpor color code 6 dgit er hexa code
         // backgroundColor: Color(0xFF3F91D0FF),
         backgroundColor: Colors.pink,
         title: Text("All Widgets Button"),
         centerTitle: true,
+        toolbarHeight: 70,
       ),
       body: ListView(
         padding: const EdgeInsets.all(20.0),
         children: [
-          Container(
-            height: 40,
-            color: Colors.orange,
-            child: Center(child: Text("Module 6"))
+
+
+
+
+
+
+
+
+          Card(
+            // elevation: 07,
+            color: Colors.amber,
+            child: ListTile(
+              title: Center(child: Text("Module 6"),),
+              subtitle: Text(""),
+            ),
           ),
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(onPressed: (){
@@ -70,10 +92,14 @@ class HomePage extends StatelessWidget {
             },
                 child: Text("Column_Row_Dialog_bottom sheet_Snackbar")),
           ),
-          Container(
-              height: 40,
-              color: Colors.orange,
-              child: Center(child: Text("Module 7"))
+
+          Card(
+            // elevation: 07,
+            color: Colors.amber,
+            child: ListTile(
+              title: Center(child: Text("Module 7")),
+              subtitle: Text(""),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -89,10 +115,13 @@ class HomePage extends StatelessWidget {
             },
                 child: Text("All_Button")),
           ),
-          Container(
-              height: 40,
-              color: Colors.orange,
-              child: Center(child: Text("Module 8"))
+          Card(
+            // elevation: 07,
+            color: Colors.amber,
+            child: ListTile(
+              title: Center(child: Text("Module 8"),),
+              subtitle: Text(""),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -110,6 +139,24 @@ class HomePage extends StatelessWidget {
           ),
 
 
+
+
+
+
+
+
+
+
+
+
+
+          // Card(
+          //   elevation: 16,
+          //   child: ListTile(
+          //     title: Text("hi"),
+          //     subtitle: Text("lorem"),
+          //   ),
+          // ),
         ],
       ),
 
